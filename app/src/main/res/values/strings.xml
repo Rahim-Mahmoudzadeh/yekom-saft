@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">YekomSaft</string>
+    <string name="search_filed">مخاطب مورد نظر را سرچ کنید!</string>
+    <string name="delete_all">پاک کردن همه</string>
+    <string name="empty_contact">حاجی جان مادرت یه مخاطبی اضافه کن!</string>
+    <string name="add_contact">مخاطب جدید اضافه کنید</string>
+    <string name="firstName">نام:</string>
+    <string name="lastName">نام خانوادگی:</string>
+    <string name="address">آدرس:</string>
+    <string name="number">شماره تلفن:</string>
+    <string name="email">ایمیل:</string>
+    <string name="ok">ثبت</string>
 </resources>

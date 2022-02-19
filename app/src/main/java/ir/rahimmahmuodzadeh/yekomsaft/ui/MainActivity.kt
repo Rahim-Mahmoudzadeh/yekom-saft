@@ -1,7 +1,8 @@
-package ir.rahimmahmuodzadeh.yekomsaft
+package ir.rahimmahmuodzadeh.yekomsaft.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ir.rahimmahmuodzadeh.yekomsaft.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
