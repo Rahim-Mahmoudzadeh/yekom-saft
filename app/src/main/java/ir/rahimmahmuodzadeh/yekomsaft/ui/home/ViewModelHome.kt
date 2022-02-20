@@ -13,8 +13,11 @@ class ViewModelHome(val repositoryContact: RepositoryContact) : BaseViewModel() 
 
     private val _operationsGetContact = MutableLiveData<Resource<List<Contact>>>()
     val operationsGetContact: LiveData<Resource<List<Contact>>> = _operationsGetContact
+    init {
+        getContact()
+    }
 
-    fun getContact() {
+    private fun getContact() {
         viewModelScope.launch {
             _operationsGetContact.value = Resource.Loading()
             repositoryContact.getContact().catch {
@@ -49,13 +52,12 @@ class ViewModelHome(val repositoryContact: RepositoryContact) : BaseViewModel() 
         }
     }
 
-    fun search(name: String): LiveData<Resource<String>> = liveData {
+    fun search(number: String): LiveData<Resource<List<Contact>>> = liveData {
         emit(Resource.Loading())
-        val search = runCatching {
-            repositoryContact.search(name)
-        }
-        search.onSuccess {
-            emit(Resource.Success(successText))
+        runCatching {
+            repositoryContact.search(number)
+        }.onSuccess {
+            emit(Resource.Success(it))
         }.onFailure {
             emit(Resource.Error(errorText))
         }

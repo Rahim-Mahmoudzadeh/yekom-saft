@@ -15,5 +15,5 @@ interface RepositoryContact {
 
     suspend fun update(contact: Contact)
 
-    suspend fun search(name: String): Flow<List<Contact>>
+    suspend fun search(number: String): List<Contact>
 }

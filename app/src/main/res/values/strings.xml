@@ -10,4 +10,8 @@
     <string name="number">شماره تلفن:</string>
     <string name="email">ایمیل:</string>
     <string name="ok">ثبت</string>
+    <string name="error_textInput">فیلد خالی را پر کنید!</string>
+    <string name="error_text_phone">شماره تلفن صحیح نیست</string>
+    <string name="update">ویرایش</string>
+
 </resources>

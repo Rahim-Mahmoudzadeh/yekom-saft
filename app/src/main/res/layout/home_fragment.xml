@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/iv_home_deleteAllTasks"
+                android:id="@+id/iv_home_deleteAllContant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -65,8 +65,8 @@
                 android:text="@string/delete_all"
                 android:textColor="@color/white"
                 android:layout_marginEnd="4dp"
-                app:layout_constraintEnd_toStartOf="@+id/iv_home_deleteAllTasks"
-                app:layout_constraintTop_toTopOf="@+id/iv_home_deleteAllTasks" />
+                app:layout_constraintEnd_toStartOf="@+id/iv_home_deleteAllContant"
+                app:layout_constraintTop_toTopOf="@+id/iv_home_deleteAllContant" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
     <RelativeLayout

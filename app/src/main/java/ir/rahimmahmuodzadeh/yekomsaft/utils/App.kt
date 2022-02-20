@@ -4,6 +4,7 @@ import android.app.Application
 import ir.rahimmahmuodzadeh.yekomsaft.data.dataBase.DataBase
 import ir.rahimmahmuodzadeh.yekomsaft.data.repository.RepositoryContact
 import ir.rahimmahmuodzadeh.yekomsaft.data.repository.RepositoryImplContact
+import ir.rahimmahmuodzadeh.yekomsaft.ui.addContacts.ViewModelAddContact
 import ir.rahimmahmuodzadeh.yekomsaft.ui.home.ViewModelHome
 import org.koin.android.ext.android.get
 import org.koin.android.ext.koin.androidApplication
@@ -19,6 +20,7 @@ class App : Application() {
             single { DataBase.getInstance(androidApplication()) }
             factory<RepositoryContact> { RepositoryImplContact(get()) }
             viewModel{ViewModelHome(get())}
+            viewModel{ViewModelAddContact(get())}
         }
         startKoin {
             androidContext(this@App)

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DaoContact {
-    @Insert()
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addContact(contact: Contact)
 
     @Delete()
@@ -19,8 +19,8 @@ interface DaoContact {
     @Query("SELECT * FROM Contact")
     fun getContact(): Flow<List<Contact>>
 
-    @Query("SELECT * FROM Contact WHERE firstName LIKE :name")
-    fun search(name:String):Flow<List<Contact>>
+    @Query("SELECT * FROM Contact WHERE number LIKE '%' || :number || '%'")
+    suspend fun search(number:String):List<Contact>
 
     @Query("DELETE FROM Contact")
     suspend fun deleteAll()

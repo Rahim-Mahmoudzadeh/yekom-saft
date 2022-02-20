@@ -11,9 +11,26 @@
         <action
             android:id="@+id/action_fragmentHome_to_addContactFragment"
             app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentShowDetail"
+            app:destination="@id/fragmentShowDetail" />
     </fragment>
     <fragment
         android:id="@+id/addContactFragment"
         android:name="ir.rahimmahmuodzadeh.yekomsaft.ui.addContacts.AddContactFragment"
-        android:label="AddContactFragment" />
+        android:label="AddContactFragment" >
+        <action
+            android:id="@+id/action_addContactFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentShowDetail"
+        android:name="ir.rahimmahmuodzadeh.yekomsaft.ui.showDetail.FragmentShowDetail"
+        android:label="FragmentShowDetail" >
+        <action
+            android:id="@+id/action_fragmentShowDetail_to_fragmentHome"
+            app:destination="@id/fragmentHome"
+            app:popUpTo="@id/fragmentHome"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
