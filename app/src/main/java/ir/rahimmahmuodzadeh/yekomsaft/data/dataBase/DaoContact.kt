@@ -21,4 +21,7 @@ interface DaoContact {
 
     @Query("SELECT * FROM Contact WHERE firstName LIKE :name")
     fun search(name:String):Flow<List<Contact>>
+
+    @Query("DELETE FROM Contact")
+    suspend fun deleteAll()
 }
